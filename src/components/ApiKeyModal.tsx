@@ -1,3 +1,10 @@
+/**
+ * Copyright (c) 2026 Ujjwal Kumar Bhowmick
+ * Developer: Ujjwal Kumar Bhowmick
+ * Email: ujjwalkumarbhowmick30@gmail.com
+ * All rights reserved.
+ */
+
 import React, { useState, useEffect } from 'react';
 import { Key, X, Check, AlertCircle, ExternalLink, Sparkles, Loader2 } from 'lucide-react';
 import { GeminiHRService, DEFAULT_GEMINI_MODEL } from '../services/geminiService';

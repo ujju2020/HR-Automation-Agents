@@ -10,15 +10,20 @@
 
 ---
 
-## Executive Summary
+## 📌 Executive Summary
 
-Modern People Operations (HR) teams are overwhelmed by disconnected software silos, manual resume parsing, subjective evaluations, delayed onboarding ramps, and opaque team burnout. 
+Modern People Operations (HR) teams struggle with fragmented software silos, manual resume screening bottlenecks, subjective performance evaluations, protracted onboarding ramp cycles, and opaque team burnout.
 
-**PulseHR OS** is an end-to-end, multi-agent AI orchestration platform powered by **Google Gemini (Vertex AI)**. It unites 5 specialized autonomous agents across the entire employee lifecycle—from talent acquisition and personalized onboarding, to real-time burnout telemetry, 360-degree performance appraisal, and an autonomous HR policy concierge.
+**PulseHR OS** is an end-to-end, multi-agent AI orchestration platform powered by **Google Gemini (Vertex AI)**. It unites 5 specialized autonomous agents across the entire employee lifecycle:
+1. **Talent Acquisition & Bias-Mitigated Screening** (Candidate scoring & interview rubric synthesis)
+2. **Personalized 30-60-90 Day Onboarding** (Ramp-up milestones, mentor matching & IT provisioning)
+3. **Workplace Productivity & Burnout Telemetry** (eNPS, meeting load, flight risk & managerial playbooks)
+4. **Continuous 360-Degree Performance Appraisal** (Multi-stakeholder feedback & promotion readiness)
+5. **Autonomous HR Policy Concierge** (Multi-turn conversational assistant with verified handbook citations)
 
 ---
 
-## System Architecture
+## 🏛️ System Architecture
 
 PulseHR OS coordinates a synchronized 5-agent swarm where each agent is responsible for an autonomous lifecycle phase, exchanging telemetry and structured context across an orchestrated pipeline.
 
@@ -43,42 +48,56 @@ graph TD
 
 ---
 
-## The 5 Autonomous HR Agents
+## 🤖 The 5 Autonomous HR Agents
 
-### 1. 🎯 TalentScout Agent (Recruitment & Intelligent Screening)
-- **Multi-Vector Semantic Matching**: Calculates multi-vector scores across Technical Proficiency, Leadership Potential, Culture Addition, and Retention Velocity.
-- **Algorithmic Anti-Bias**: Blind evaluation engine that strips candidate names, graduation dates, and university pedigree to mitigate cognitive bias and evaluate strictly on demonstrable merit.
-- **Autonomous Interview Questionnaire Synthesizer**: Generates structured, role-tailored behavioral and technical interview guides with clear scoring rubrics and 1-click clipboard export.
-- **Interactive Resume Sandbox**: Real-time evaluation of custom candidate snippets with instant scoring and recommendations.
-
-### 2. 🚀 OnboardPilot Agent (30-60-90 Day Personalized Ramp)
-- **Dynamic 30-60-90 Milestones**: Automatically structures bespoke Day 30, Day 60, and Day 90 phases with actionable task checklists across Technical, Culture, Compliance, and Delivery categories.
-- **Interactive Task Checklist**: Check off items in real time to visualize live onboarding velocity and milestone review gates.
-- **AI-Matched Onboarding Buddy**: Pairs new hires with compatible senior peers based on tech stack synergy, domain focus, and culture metrics.
-- **Automated IT Provisioning Tracker**: Live telemetry tracking laptop shipment, SSO/cloud IAM permissions, and security badge activations.
-
-### 3. 📊 PulseSentinel Agent (Workplace Productivity & Burnout Telemetry)
-- **Real-Time Burnout Risk Gauge**: Monitors organizational health, eNPS (+46 benchmark), meeting load averages (hrs/week), and predictive flight risk before voluntary attrition occurs.
-- **5-Week Sentiment Trend Analysis**: Visual historical trend bars tracking team morale with automated alerts when scores drop below safe thresholds.
-- **Anonymous Friction Signal Mining**: Synthesizes unvarnished team feedback into top stressors while guaranteeing k-anonymity (k ≥ 5) and privacy.
-- **Proactive Managerial Interventions**: Dispatches targeted 1-click playbooks (e.g., No-Meeting Focus Wednesdays, AI meeting note bot, quota ramp buffers).
-
-### 4. 📈 Elevate360 Agent (360 Performance Appraisal & Career Progression)
-- **Multi-Stakeholder Synthesis**: Consolidates peer feedback, managerial calibrations, and self-assessments into an objective performance rating.
-- **5-Dimension Competency Radar**: Quantifies Domain Mastery, Strategic Execution, Team Collaboration, Innovation, and Mentorship Impact.
-- **Promotion Readiness Index**: Delivers an objective percentage score indicating readiness for target level progression (e.g., L6 Staff to L7 Principal).
-- **Quarterly Career Development Pathway**: Outlines actionable quarter-by-quarter learning milestones to bridge remaining competency gaps.
-
-### 5. 💬 PeopleAdvisor Agent (Autonomous HR Policy Concierge)
-- **Interactive Multi-Turn Chat**: Instant answers to complex employee questions covering parental leave, remote work hardware stipends, equity vesting (RSUs/options), health coverage, and expense rules.
-- **Verifiable Policy Citations**: Every response cites the exact section and policy document from the enterprise handbook (e.g., *Section 4.1: Remote Work Accommodations, Global Employee Handbook 2026*).
-- **Quick-Inquiry Prompts**: 1-click contextual prompt chips for instant triage based on the selected departmental domain.
+| Agent | Domain & Mission | Core Autonomous Deliverables |
+| :--- | :--- | :--- |
+| **🎯 TalentScout** | **Recruitment & Screening** | Multi-Vector semantic matching (Technical, Leadership, Culture, Retention), blind algorithmic DEI audit, auto-generated structured interview rubrics, and interactive candidate sandbox. |
+| **🚀 OnboardPilot** | **Employee Lifecycle & Ramp** | Automated 30-60-90 day personalized milestone roadmap, interactive task checklists with velocity tracking, AI-matched onboarding buddy, and IT provisioning telemetry. |
+| **📊 PulseSentinel** | **Productivity & Sentiment** | Real-time burnout risk gauge, eNPS metrics, meeting load fatigue tracking, 5-week sentiment trend bars, and 1-click proactive managerial interventions. |
+| **📈 Elevate360** | **Performance & Growth** | Multi-stakeholder review synthesis, 5-dimension competency radar, objective Promotion Readiness Index, and quarterly career development pathways. |
+| **💬 PeopleAdvisor** | **Autonomous HR Concierge** | Multi-turn conversational employee assistance grounded in company policies with verifiable handbook citations and contextual prompt suggestions. |
 
 ---
 
-## Enterprise Role Presets (Demo Ready)
+## 📂 Project Structure
 
-PulseHR OS includes 4 rich enterprise scenarios ready for instant demonstration:
+```
+HR-Automation-Agents/
+├── index.html                   # HTML5 entry with fonts and metadata
+├── package.json                 # React 18, Vite 6, TypeScript 5, Tailwind CSS, Lucide
+├── vite.config.ts               # Vite configuration with React plugin
+├── tailwind.config.js           # Custom design system tokens & glassmorphism theme
+├── tsconfig.json                # Strict TypeScript configuration
+├── src/
+│   ├── main.tsx                 # React application bootstrapper
+│   ├── App.tsx                  # Master dashboard with telemetry, swarm timeline & tab routing
+│   ├── index.css                # Glassmorphic utilities, animations & custom dark scrollbars
+│   ├── types/
+│   │   └── hr.ts                # TypeScript interfaces for candidates, onboarding, pulse & reviews
+│   ├── data/
+│   │   └── enterprisePresets.ts # 4 rich pre-computed scenarios across tech, sales, design, & ops
+│   ├── services/
+│   │   └── geminiService.ts     # Google Gemini (Vertex AI) REST client with model selection
+│   ├── components/
+│   │   ├── Navbar.tsx           # Navigation bar with role preset switcher & Gemini config
+│   │   ├── MetricOverview.tsx   # 4 high-level HR telemetry cards with real-time benchmarks
+│   │   ├── AgentPipelineVisualizer.tsx # Live interactive multi-agent orchestration timeline
+│   │   ├── ApiKeyModal.tsx      # Gemini API key and model selection modal
+│   │   └── tabs/
+│   │       ├── TalentScoutTab.tsx   # Candidate scoring, multi-vector radar & interview rubrics
+│   │       ├── OnboardPilotTab.tsx  # Interactive 30-60-90 roadmap, task toggles & buddy card
+│   │       ├── PulseSentinelTab.tsx # Department burnout index, sentiment trends & playbooks
+│   │       ├── Elevate360Tab.tsx    # 360 feedback synthesizer, competency radar & export
+│   │       └── PeopleAdvisorTab.tsx # Interactive conversational policy bot with citations
+└── README.md                    # Comprehensive documentation & setup guide
+```
+
+---
+
+## 💼 Enterprise Role Presets (Demo Ready)
+
+PulseHR OS includes 4 complete enterprise scenarios ready for instant demonstration:
 
 1. **Senior AI / ML Platform Engineer** (*Core Infrastructure & AI Platform*): LLM inference cluster scaling, high-throughput model gateways, GPU kernel page triage, and Staff-to-Principal progression.
 2. **Enterprise Account Executive (GTM)** (*Revenue Operations & Enterprise Sales*): Multi-million dollar quota attainment, MEDDPICC qualification, sales ramp milestones, and quarter-end burnout mitigation.
@@ -87,23 +106,23 @@ PulseHR OS includes 4 rich enterprise scenarios ready for instant demonstration:
 
 ---
 
-## Dual-Engine Architecture
+## ⚡ Dual-Engine Architecture
 
-- **Offline High-Fidelity Demo Mode**: Zero-latency, highly detailed datasets pre-configured for instant presentation and flawless demonstration.
+- **Offline High-Fidelity Demo Mode**: Zero-latency, highly detailed datasets pre-configured for instant presentation and reliable offline demonstration.
 - **Google Gemini Live Mode**: Configurable directly in the UI via the topbar **API Key** button. Enter any Google AI Studio or Vertex AI Gemini key (`gemini-2.5-flash`, `gemini-1.5-pro`, `gemini-1.5-flash`) to enable live dynamic candidate parsing, policy chat, and rubric generation.
 
 ---
 
-## Technology Stack
+## 🛠️ Technology Stack
 
-- **Core & Runtime**: React 18, TypeScript 5, Vite 6
+- **Frontend & Runtime**: React 18, TypeScript 5, Vite 6
 - **Styling & Aesthetics**: Tailwind CSS with custom glassmorphism design system (`#090d16` canvas, neon indigo/cyan/emerald accents, glowing borders, custom dark scrollbars)
 - **Icons**: Lucide React
 - **AI Integration**: Google Gemini REST API (Vertex AI compatible)
 
 ---
 
-## Quickstart Guide
+## 🚀 Quickstart Guide
 
 ### Prerequisites
 - Node.js (v18+ or v20+)
@@ -134,6 +153,13 @@ Compiles TypeScript cleanly and bundles production assets into `dist/`.
 
 ---
 
-## License & Credits
+## 📄 License & Copyright
+
+**Copyright (c) 2026 Ujjwal Kumar Bhowmick**  
+- **Developer**: Ujjwal Kumar Bhowmick  
+- **Email**: [ujjwalkumarbhowmick30@gmail.com](mailto:ujjwalkumarbhowmick30@gmail.com)  
+- **All rights reserved.**
+
+---
 
 Developed for the **BITSom Vertex Fest** Hackathon. Powered by Google Gemini.

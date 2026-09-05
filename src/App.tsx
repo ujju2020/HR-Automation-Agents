@@ -1,3 +1,10 @@
+/**
+ * Copyright (c) 2026 Ujjwal Kumar Bhowmick
+ * Developer: Ujjwal Kumar Bhowmick
+ * Email: ujjwalkumarbhowmick30@gmail.com
+ * All rights reserved.
+ */
+
 import React, { useState, useEffect } from 'react';
 import { 
   UserCheck, 
@@ -297,6 +304,10 @@ export const App: React.FC = () => {
           </div>
 
           <div className="flex items-center gap-4 text-[11px]">
+            <span className="text-slate-400">
+              © 2026 <strong>Ujjwal Kumar Bhowmick</strong> • All rights reserved.
+            </span>
+            <span>•</span>
             <span className="flex items-center gap-1 text-slate-400">
               Built for <strong className="text-indigo-400">BITSom Vertex Fest</strong>
             </span>
